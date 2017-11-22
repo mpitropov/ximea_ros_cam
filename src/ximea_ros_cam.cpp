@@ -533,7 +533,8 @@ void XimeaROSCam::openCam() {
             // Apply frame rate (we assume MQ camera here)
             xi_stat = xiSetParamInt(this->xi_h_,
                                       XI_PRM_FRAMERATE,
-                                      this->cam_framerate_set_);
+                                      2);
+                                      // this->cam_framerate_set_);
         } else {
             // default to free run
             xi_stat = xiSetParamInt(this->xi_h_,
